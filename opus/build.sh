@@ -1,12 +1,8 @@
 #!/bin/bash
 
-# opus repo
-git init
-git remote add origin https://github.com/xiph/opus.git
-git pull
-
-# version
-git checkout v1.3.1
+# opus repo v1.3.1 from xiph
+git clone https://gitlab.xiph.org/xiph/opus
+cd opus && git checkout v1.3.1
 
 # build lib
 ./autogen.sh
